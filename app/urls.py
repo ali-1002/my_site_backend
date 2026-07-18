@@ -4,7 +4,7 @@ from django.conf.urls.static import static
 from .views import PostAPIView
 
 urlpatterns = [
-    path('', PostAPIView.as_view()),
+    path('post', PostAPIView.as_view()),
 ]
 
 if settings.DEBUG:
