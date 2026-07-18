@@ -3,6 +3,8 @@ import requests
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
+
+from .models import Post
 from .serializers import PostSerializer
 from dotenv import load_dotenv
 
@@ -31,3 +33,8 @@ class PostAPIView(APIView):
             }
         )
         return Response({"message": "Message sent successfully"}, status=status.HTTP_201_CREATED)
+
+    def get(self, request, *args, **kwargs):
+        posts = Post.objects.all()
+        serializer = PostSerializer(posts, many=True)
+        return Response(serializer.data)
