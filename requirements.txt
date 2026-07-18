@@ -16,10 +16,12 @@ djangorestframework==3.17.1
 djangorestframework-stubs==3.17.0
 djangorestframework_simplejwt==5.5.1
 frozenlist==1.8.0
+gunicorn==26.0.0
 idna==3.18
 magic-filter==1.0.12
 multidict==6.7.1
 mysqlclient==2.2.8
+packaging==26.2
 pillow==12.2.0
 propcache==0.5.2
 psycopg2-binary==2.9.12
